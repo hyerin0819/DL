@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL이앤씨</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var scrollTop = $(window).scrollTop();
+
+                console.log(scrollTop);
+
+                if(scrollTop >= 100) {
+                    $(".in_header").css({
+                        display: "none",
+                    })
+                    $(".scroll_header").fadeIn().css({
+                        display: "flex",
+                        justifyContent: "space-between",
+                    });
+                    $("header").css({
+                        backgroundColor: "white",
+                    });
+                    $(".menu > li > a").css({
+                        color: "#333",
+                    });
+                    $(".gnb > li:nth-child(2) > a").css({
+                        color: "#333",
+                    });
+                } else {
+                    $("header").css({
+                        backgroundColor: "transparent",
+                    });
+                    $(".menu > li > a").css({
+                        color: "white",
+                    });
+                    $(".gnb > li:nth-child(2) > a").css({
+                        color: "white",
+                    });
+                    $(".in_header").css({
+                        display: "flex",
+                    });
+                    $(".scroll_header").css({
+                        display: "none",
+                    })
+                }
+            });
+        });
+    </script>
+    <style>
+        .section_3 {
+            background-image: url(img/sec_3_img.png);
+            background-repeat: no-repeat;
+        }
+
+        /* .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="in_header">
+                <div class="logo">
+                    <a href="#"><img src="img/header_logo_w.png" alt="디엘이앤씨"></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">지속가능경영</a></li>
+                    <li><a href="#">투자정보</a></li>
+                    <li><a href="#">홍보센터</a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+                <ul class="gnb">
+                    <li><a href="#"><img src="img/search_icon_w.png" alt="검색"></a></li>
+                    <li><a href="#">ENG</a></li>
+                    <li><a href="#"><img src="img/menu_icon_w.png" alt="메뉴"></a></li>
+                </ul>
+            </div>
+            <div class="scroll_header">
+                <div class="logo">
+                    <a href="#"><img src="img/header_logo_b.png" alt="디엘이앤씨"></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">지속가능경영</a></li>
+                    <li><a href="#">투자정보</a></li>
+                    <li><a href="#">홍보센터</a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+                <ul class="gnb">
+                    <li><a href="#"><img src="img/search_icon_b.png" alt="검색"></a></li>
+                    <li><a href="#">ENG</a></li>
+                    <li><a href="#"><img src="img/menu_icon_b.png" alt="메뉴"></a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- header end -->
+        <section class="section_1">
+            <video src="video/sec_1_video.mp4" autoplay muted loop></video>
+        </section>
+        <!-- section_1 end -->
+        <section class="section_2">
+            <div class="sec_title">
+                <h3>OUR BUSINESS</h3>
+            </div>
+            <div class="sec_2_con">
+                <div class="con con_1">
+                    <a href="#"><img src="img/sec_2_img_1.png" alt="건축사업"></a>
+                    <div class="con_txt">
+                        <h3>건축</h3>
+                        <p>건설 전문 디벨로퍼로서
+                            건설문화를 선도하는 비전을 제시합니다.</p>
+                    </div>
+                    
+                </div>
+                <div class="con con_2">
+                    <a href="#"><img src="img/sec_2_img_2.png" alt="주택사업"></a>
+                    <div class="con_txt">
+                        <h3>주택</h3>
+                        <p>단순한 주거공간이 아닌
+                            진일보한 삶의 터전을 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="con con_3">
+                    <a href="#"><img src="img/sec_2_img_3.png" alt="토목사업"></a>
+                    <div class="con_txt">
+                        <h3>토목</h3>
+                        <p>인간과 자연이 공존하는 
+                            친환경 건설에 앞장섭니다.</p>
+                    </div>
+                </div>
+                <div class="con con_4">
+                    <a href="#"><img src="img/sec_2_img_4.png" alt="플랜트사업"></a>
+                    <div class="con_txt">
+                        <h3>플랜트</h3>
+                        <p>국내 건설업체 최초로 세계에서 인정받는
+                            Global Contractor로 자리매김하였습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sec_2_con_m">
+                <div class="con con_1">
+                    <a href="#"><img src="img/sec_2_img_1_m.png" alt="건축사업"></a>
+                    <div class="con_txt">
+                        <h3>건축</h3>
+                        <p>건설 전문 디벨로퍼로서
+                            건설문화를 선도하는 비전을 제시합니다.</p>
+                    </div>
+                </div>
+                <div class="con con_2">
+                    <a href="#"><img src="img/sec_2_img_2_m.png" alt="주택사업"></a>
+                    <div class="con_txt">
+                        <h3>주택</h3>
+                        <p>단순한 주거공간이 아닌
+                            진일보한 삶의 터전을 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="con con_3">
+                    <a href="#"><img src="img/sec_2_img_3_m.png" alt="토목사업"></a>
+                    <div class="con_txt">
+                        <h3>토목</h3>
+                        <p>인간과 자연이 공존하는 
+                            친환경 건설에 앞장섭니다.</p>
+                    </div>
+                </div>
+                <div class="con con_4">
+                    <a href="#"><img src="img/sec_2_img_4_m.png" alt="플랜트사업"></a>
+                    <div class="con_txt">
+                        <h3>플랜트</h3>
+                        <p>국내 건설업체 최초로 세계에서 인정받는
+                            Global Contractor로 자리매김하였습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section_2 end -->
+        <section class="section_3">
+            <div class="sec_3_inner">
+                <div class="sec_title">
+                    <h3>ESG ACTIVITY</h3>
+                </div>
+                <div class="sec_3_con">
+                    <div class="con con_1">
+                        <a href="#"><img src="img/scales_icon.png" alt="정도경영"></a>
+                        <p>정도경영</p>
+                    </div>
+                    <div class="con con_2">
+                        <a href="#"><img src="img/cooparation_icon.png" alt="상생경영"></a>
+                        <p>상생경영</p>
+                    </div>
+                    <div class="con con_3">
+                        <a href="#"><img src="img/quality_icon.png" alt="품질경영"></a>
+                        <p>품질경영</p>
+                    </div>
+                    <div class="con con_4">
+                        <a href="#"><img src="img/helmet_icon.png" alt="안전보건"></a>
+                        <p>안전보건</p>
+                    </div>
+                    <div class="con con_5">
+                        <a href="#"><img src="img/eco_icon.png" alt="환경"></a>
+                        <p>환경</p>
+                    </div>
+                    <div class="con con_6">
+                        <a href="#"><img src="img/heart_icon.png" alt="사회공헌"></a>
+                        <p>사회공헌</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section_3 end -->
+        <section class="section_4">
+            <div class="sec_title">
+                <h3>NEWS ROOM</h3>
+            </div>
+            <div class="sec_4_con">
+                <div class="con con_1">
+                    <a href="#">
+                        <img src="img/sec_4_img_1.png" alt="공지사항">
+                    </a>
+                    <div class="con_txt">
+                        <p>[공지사항]</p>
+                        <h3>DL이앤씨, 서영재 대표 선임 “신사업·혁신 속도”</h3>
+                        <p><span>2024.05.10</span></p>
+                    </div>
+                </div>
+                <div class="con con_2">
+                    <a href="#">
+                        <img src="img/sec_4_img_2.png" alt="현장소식">
+                    </a>
+                    <div class="con_txt">
+                        <p>[현장소식]</p>
+                        <h3>DL이앤씨, 4,264톤 플랜트 공장 모듈 태평양 건넌다.</h3>
+                        <p><span>2024.05.10</span></p>
+                    </div>
+                </div>
+                <div class="con con_3">
+                    <a href="#">
+                        <img src="img/sec_4_img_3.png" alt="행사">
+                    </a>
+                    <div class="con_txt">
+                        <p>[행사]</p>
+                        <h3>DL이앤씨, ‘임직원 심리상담 서비스’ 확대 운영</h3>
+                        <p><span>2024.05.03</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="sec_4_con_m">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide sw_con">
+                        <a href="#">
+                            <img src="img/sec_4_img_1.png" alt="공지사항">
+                        </a>
+                        <div class="con_txt">
+                            <p>[공지사항]</p>
+                            <h3>DL이앤씨, 서영재 대표 선임 “신사업·혁신 속도”</h3>
+                            <p><span>2024.05.10</span></p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide sw_con">
+                        <a href="#">
+                            <img src="img/sec_4_img_2.png" alt="현장소식">
+                        </a>
+                        <div class="con_txt">
+                            <p>[현장소식]</p>
+                            <h3>DL이앤씨, 4,264톤 플랜트 공장 모듈 태평양 건넌다.</h3>
+                            <p><span>2024.05.10</span></p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide sw_con">
+                        <a href="#">
+                            <img src="img/sec_4_img_3.png" alt="행사">
+                        </a>
+                        <div class="con_txt">
+                            <p>[행사]</p>
+                            <h3>DL이앤씨, ‘임직원 심리상담 서비스’ 확대 운영</h3>
+                            <p><span>2024.05.03</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+            </div>
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+        </section>
+        <!-- section_4 end -->
+        <section class="section_5">
+            <div class="sec_title">
+                <h3>PROMOTION</h3>
+            </div>
+            <div class="sec_5_con">
+                <div class="con con_1">
+                    <p>DL이앤씨 기업 홍보영상</p>
+                    <a href="#">
+                        <img src="img/sec_5_img_1.png" alt="DL이앤씨 기업 홍보영상">
+                    </a>
+                </div>
+                <div class="con con_2">
+                    <p>DL그룹 홍보영상</p>
+                    <a href="#">
+                        <img src="img/sec_5_img_2.png" alt="DL그룹 홍보영상">
+                    </a>
+                </div>
+            </div>
+            <div class="sec_5_con_m">
+                <div class="con con_1">
+                    <a href="#">
+                        <img src="img/sec_5_img_1_m.png" alt="DL이앤씨 기업 홍보영상">
+                    </a>
+                    <p>DL이앤씨 기업 홍보영상</p>
+                </div>
+                <div class="con con_2">
+                    <a href="#">
+                        <img src="img/sec_5_img_2_m.png" alt="DL그룹 홍보영상">
+                    </a>
+                    <p>DL그룹 홍보영상</p>
+                </div>
+            </div>
+        </section>
+        <!-- section_5 end -->
+        <footer>
+            <div class="ft_con">
+                <ul class="ft_gnb">
+                    <li><a href="#">전자공고</a></li>
+                    <li><a href="#">원가절감제안</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">영상정보처리기기운영관리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">사옥안내</a></li>
+                    <li><a href="#">고객문의</a></li>
+                    <li><a href="#"><img src="img/wa_mark.png" alt="미래창조과학부"></a></li>
+                </ul>
+                <div class="site">
+                    <select>
+                        <option>업무 사이트</option>
+                        <option>DL OB</option>
+                        <option>퇴직자제증명</option>
+                        <option>DL 협력업체 포탈 시스템</option>
+                        <option>전자근로계약</option>
+                        <option>전자세금계산서</option>
+                    </select>
+                    <select>
+                        <option>관계사 사이트</option>
+                        <option>e편한세상</option>
+                        <option>(주)대림</option>
+                        <option>아크로</option>
+                        <option>대림수암장학문화재단</option>
+                        <option>DL(주)</option>
+                        <option>글래드 호텔앤리조트</option>
+                        <option>DL케미칼(주)</option>
+                        <option>DL건설(주)</option>
+                        <option>DL모터스(주)</option>
+                        <option>대림학원</option>
+                        <option>폴리미래</option>
+                        <option>대림문화재단</option>
+                        <option>여천NCC</option>
+                    </select>
+                </div>
+                <ul class="copyright">
+                    <li>서울 종로구 통일로 134 D타워 돈의문</li>
+                    <li>COPYRIGHT (c) 2021 DL이앤씨 All RIGHTS RESERVED.</li>
+                </ul>
+            </div> 
+        </footer>
+        <!-- footer end -->
+    </div>
+</body>
+</html>
